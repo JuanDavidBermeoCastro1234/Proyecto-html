@@ -1,0 +1,56 @@
+/* Configuración mínima mejorada */
+@import url(variables.css); /* Importa variables si las hay */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Evita que padding y border aumenten el tamaño */
+  outline: 2px solid tomato; /* Depuración visual */
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh; /* Asegura que el body ocupe toda la pantalla */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Usa una fuente clara y legible */
+  line-height: 1.5; /* Espaciado cómodo entre líneas */
+}
+
+p {
+  text-wrap: pretty; /* Mejora la legibilidad de párrafos */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance; /* Ajusta los títulos para mejor distribución */
+}
+
+img, video, svg {
+  max-width: 100%; /* Hace que las imágenes sean responsivas */
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit; /* Hace que los formularios se vean uniformes */
+}
+
+/* Accesibilidad: Reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition: none;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Ajuste de texto para dispositivos pequeños */
+  }
+}
