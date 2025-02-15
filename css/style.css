@@ -11,6 +11,10 @@
 ::before, ::after {
   box-sizing: border-box;
 }
+/****para usar rem basado en 10px*******/
+html {
+  font-size: 62.5%; /* Define que 1rem = 10px */
+}
 
 body {
   min-height: 100dvh; /* Asegura que el body ocupe toda la pantalla */
@@ -57,20 +61,118 @@ input, button, textarea, select {
 /*****empieza el css de la pagina******/
 .header {
   width: calc(100% - 44px); /* 100% menos los 22px de cada lado */
-  height: auto;
+  /* height: auto; */
   margin: 0 auto; 
-  margin-top: px;/**se puede manejar con negativos para anular que por defecto ya trae arriba ya abajo*/
-  
+  margin-top: 43px;/**se puede manejar con negativos para anular que por defecto ya trae arriba ya abajo*/
+
 }
 .header-section1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .img-header2{
+    width:34px;
+    height: 34px;
+  }
+  .img-header{
+    width:32px;
+    height: 32px;
+  }
 }
 .header-tile {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: calc(100% - 81px); /* Reducimos el ancho */
+  /* margin-right: 81px;    */
+  font-family:"InterDisplay-SemiBold" ;
+  font-size: 2rem;
+  .h1-1{
+    color: var(--color-2);
+  }
+  .h1-2{
+    color: var(--color-5);
+  }
 }
 .header-section2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px;
+  img{
+    width: 17px;
+    height: 17px;
+  }
+  input{
+    position: absolute;
+    width: 128px;
+    height: 17px;
+    box-sizing: border-box;
+    border: none;
+    left: 61px;
+  }
+  input::placeholder {
+    color: var(--color-2);
+    font-family:  "InterDisplay-Regular";
+    font-size: 1.2rem;
+  }
 }
 .header-section-scrull {
+  display: flex;
+  flex-direction: row;
+  /* width: 113.87%; */
+  padding-bottom: 15px;
+  gap: 12px;
+  min-width: max-content;
+  overflow-x: scroll;
+  
 }
-.article-scrull {
+.article-scrull-1 {
+  width: 112px;
+  border-radius: 8px;
+  font-family:  "InterDisplay-Regular";
+  font-size: 12px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-7);
+  color: var(--color-2);
+  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
+
+}
+.article-scrull-2 {
+  border-radius: 8px;
+  width: 76px;
+  font-family:  "InterDisplay-Regular";
+  font-size: 12px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-9);
+  color: var(--color-2);
+  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
+
+}
+.article-scrull-3 {
+  width: 104px;
+  border-radius: 8px;
+  font-family:  "InterDisplay-Regular";
+  font-size: 12px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-8);
+  color: var(--color-2);
+  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
+
+}
+.article-scrull-4 {
+  width: 63px;
+  border-radius: 8px;
+  font-family:  "InterDisplay-Regular";
+  font-size: 12px;
+  height: 28px;
+  cursor: pointer;
+  background-color: var(--color-6);
+  color: var(--color-2);
+  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
+
 }
 .main {
 }

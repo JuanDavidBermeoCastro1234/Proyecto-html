@@ -15,12 +15,12 @@
 }
 
 @font-face {
-    font-family: "Typography-Times-Bold";
-    src: url(../storage/font/Typography-Times-Bold.ttf);
+    font-family: "InterDisplay-SemiBold";
+    src: url(../storage/font/InterDisplay-SemiBold.otf);
 }
 @font-face {
-    font-family: "Typography-Times-Regular";
-    src: url(../storage/font/Typography-Times-Regular.ttf);
+    font-family: "InterDisplay-Regular";
+    src: url(../storage/font/InterDisplay-Regular.otf);
 }
 @font-face {
     font-family: "Poppins-Regular";
