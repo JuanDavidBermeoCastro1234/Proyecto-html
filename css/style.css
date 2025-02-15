@@ -54,9 +54,36 @@ input, button, textarea, select {
     font-size: 16px; /* Ajuste de texto para dispositivos pequeños */
   }
 }
-.main{
-  img{
-
-    width: 100%;
-  }
+/*****empieza el css de la pagina******/
+.header {
+}
+.header-section1 {
+}
+.header-tile {
+}
+.header-section2 {
+}
+.header-section-scrull {
+}
+.article-scrull {
+}
+.main {
+}
+.section-main1 {
+}
+.article-caption {
+}
+.article-content {
+}
+.section-article-content {
+}
+.section-article-infor {
+}
+.section-main-bajo {
+}
+.article-caption2 {
+}
+.article-content-bajo {
+}
+.article-content-bajo2 {
 }
