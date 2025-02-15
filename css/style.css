@@ -56,6 +56,11 @@ input, button, textarea, select {
 }
 /*****empieza el css de la pagina******/
 .header {
+  width: calc(100% - 44px); /* 100% menos los 22px de cada lado */
+  height: auto;
+  margin: 0 auto; 
+  margin-top: px;/**se puede manejar con negativos para anular que por defecto ya trae arriba ya abajo*/
+  
 }
 .header-section1 {
 }
