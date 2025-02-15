@@ -54,3 +54,9 @@ input, button, textarea, select {
     font-size: 16px; /* Ajuste de texto para dispositivos pequeños */
   }
 }
+.main{
+  img{
+
+    width: 100%;
+  }
+}
