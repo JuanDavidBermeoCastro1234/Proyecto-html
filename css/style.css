@@ -101,6 +101,7 @@ input, button, textarea, select {
   img{
     width: 17px;
     height: 17px;
+    cursor: pointer;
   }
   input{
     position: absolute;
@@ -109,6 +110,7 @@ input, button, textarea, select {
     box-sizing: border-box;
     border: none;
     left: 61px;
+    cursor: pointer;
   }
   input::placeholder {
     color: var(--color-2);
@@ -117,6 +119,7 @@ input, button, textarea, select {
   }
 }
 .header-section-scrull {
+  width: 100%;
   display: flex;
   flex-direction: row;
   /* width: 113.87%; */
@@ -124,7 +127,10 @@ input, button, textarea, select {
   gap: 12px;
   min-width: max-content;
   overflow-x: scroll;
-  
+  white-space: nowrap;
+  scrollbar-width: none;
+  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
+
 }
 .article-scrull-1 {
   width: 112px;
@@ -135,7 +141,6 @@ input, button, textarea, select {
   cursor: pointer;
   background-color: var(--color-7);
   color: var(--color-2);
-  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
 
 }
 .article-scrull-2 {
@@ -147,7 +152,6 @@ input, button, textarea, select {
   cursor: pointer;
   background-color: var(--color-9);
   color: var(--color-2);
-  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
 
 }
 .article-scrull-3 {
@@ -159,8 +163,7 @@ input, button, textarea, select {
   cursor: pointer;
   background-color: var(--color-8);
   color: var(--color-2);
-  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
-
+ 
 }
 .article-scrull-4 {
   width: 63px;
@@ -171,20 +174,111 @@ input, button, textarea, select {
   cursor: pointer;
   background-color: var(--color-6);
   color: var(--color-2);
-  flex: 0 0 auto; /* Evita que los elementos se reduzcan */
 
 }
 .main {
+  width: calc(100% - 44px); /* 100% menos los 22px de cada lado */
+  /* height: auto; */
+  margin: 0 auto; 
+  margin-top: 43px;
 }
 .section-main1 {
 }
 .article-caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  h3{
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.4rem;
+    color: var(--color-2);
+  }
+  p{
+    font-family:  "InterDisplay-Regular";
+    color: var(--color-4);
+    font-size: 1.4rem;
+  }
 }
 .article-content {
+  width: 100%;
+  /* height: 186px; */
+  display: flex;
+  /* flex-direction: column; */
+  position: relative;
+  z-index: -1;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.section-content-figcaption{
+  position: absolute;
+  width: 332px;
+  height: 90px;
+  margin-top: 88px;
+  margin-left: 7px;
+  /* padding: 8px; */
+  /* gap: 20px; */
 }
 .section-article-content {
+  background: blue;
+  display: flex;
+  height: 57px;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 16.5px;
+  margin-left: 13px;
+
+  h3{
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.2rem;
+    color: var(--color-1);
+    margin-bottom: 6px;
+    width: 184px;
+    height: 15px;
+    
+  }
+  figure{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 6px;
+
+    img{
+      width: 11px;
+      height: 12px;
+      /* margin-right: 8px; */
+      display: block; /* Hace que la imagen sea un bloque */
+      margin-top: auto;
+      margin-bottom: auto; 
+    }
+    .figcaption1{
+      width: 163px;
+      height: 15px;
+      font-family:  "InterDisplay-Regular";
+      font-size: 12px;
+      color: var(--color-1);
+      margin-top: auto;
+      margin-bottom: auto; 
+    }
+    .figcaption2{
+      width: 109px;
+      height: 15px;
+      font-family:  "InterDisplay-Regular";
+      font-size: 12px;
+      color: var(--color-1);
+      margin-top: auto;
+      margin-bottom: auto; 
+    }
+  }
 }
 .section-article-infor {
+  position: absolute;
+  width: 102px;
+  height: 35px;
+  right: 13px;
 }
 .section-main-bajo {
 }
