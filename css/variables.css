@@ -1,10 +1,23 @@
 :root{
-
-    --color-1: red;
-    --color-2: white;
+    --color-0: #d9d7e44f;
+    --color-1: #FFFFFF;
+    --color-2: #706D6D;
+    --color-2: #000000;
+    --color-3: #761CBC;
+    --color-4: #0092FC;
+    --color-5: #EC441E;
 }
 
+
 @font-face {
-    font-family: "example";
-    src: url(../storage/font/example.ttf);
+    font-family: "InterDisplay-SemiBold";
+    src: url(../storage/font/InterDisplay-SemiBold.otf);
+}
+@font-face {
+    font-family: "InterDisplay-Regular";
+    src: url(../storage/font/InterDisplay-Regular.otf);
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../storage/font/Poppins-Regular.ttf);
 }
