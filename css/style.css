@@ -151,12 +151,14 @@ body{
     background-color: var(--color-6);
   }
 } 
-
+/************/
 .main {
+  position: relative;
   width: calc(100% - 4.4rem); /* 100% menos los 22px de cada lado */
   /* height: auto; */
   margin: 0 auto; 
   margin-top: 4rem;
+  /* background:black; */
 }
 .section-main1 {
   width: 100%;
@@ -180,25 +182,30 @@ body{
 
 /*********image*********/
 .article-content {
-  width: 100%;
-  justify-content: center;
-  display: flex;
+  position: relative;
+  width:100%;
+  height: 18.6rem;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.2rem;
+  }
 }
 .section-content-figcaption{
   background: green;
   position: absolute;
-  width: 332px;
+  width: calc(100% - 1.4rem); /* 100% menos los 22px de cada lado */
   height: 90px;
-  margin-top: 88px;
-  margin-left: 7px;
-
+  top: 8.8rem;
+  margin-left: 0.7rem;
+  display: flex;
+  z-index: 1;
 }
 .section-article-content {
   background: blue;
-  display: flex;
+  width: 55.42%;
   height: 57px;
-  flex-direction: column;
-  position: absolute;
   margin-top: 16.5px;
   margin-left: 13px;
 
@@ -207,7 +214,7 @@ body{
     font-size: 1.2rem;
     color: var(--color-1);
     margin-bottom: 6px;
-    width: 184px;
+    width: 100%;
     height: 15px;
     
   }
@@ -220,7 +227,6 @@ body{
     img{
       width: 11px;
       height: 12px;
-      /* margin-right: 8px; */
       display: block; /* Hace que la imagen sea un bloque */
       margin-top: auto;
       margin-bottom: auto; 
@@ -246,12 +252,28 @@ body{
   }
 }
 .section-article-infor {
-  position: absolute;
-  width: 102px;
-  height: 35px;
-  right: 13px;
+  background: violet;
+  width: 10.2rem;
+  height: 3.5rem;
+  margin-left: 2rem;
+  margin-top: 2.75rem;
+  p{
+    width: 4.8rem;
+    height: 1.2rem;
+    font-family:  "InterDisplay-Regular";
+    font-size: 1rem;
+    color: var(--color-1);
+  }
+  h2{
+    width: 100%;
+    height: 1.9rem;
+    color: var(--color-1);
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.6rem;
+  }
 }
 .section-main-bajo {
+  margin-top: 0rem;
 }
 .article-caption2 {
 }
