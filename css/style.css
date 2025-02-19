@@ -130,6 +130,7 @@ body{
   display: flex;
   flex-direction: row;
   gap: 12px;
+  overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
   scrollbar-width: none;
