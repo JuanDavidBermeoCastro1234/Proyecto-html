@@ -1,92 +1,106 @@
-}
-
-/* Configuración mínima mejorada */
 @import url(variables.css);
-/* Importa variables si las hay */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* Evita que padding y border aumenten el tamaño */
-  outline: 2px solid tomato;
-  /* Depuración visual */
-}
-
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  /* Usa una fuente clara y legible */
-  line-height: 1.5;
-  /* Espaciado cómodo entre líneas */
-}
-
-p {
-  text-wrap: pretty;
-  /* Mejora la legibilidad de párrafos */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-  /* Ajusta los títulos para mejor distribución */
-}
-
-img,
-video,
-svg {
-  max-width: 100%;
-  /* Hace que las imágenes sean responsivas */
-  height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  /* Hace que los formularios se vean uniformes */
-}
-
-/* Accesibilidad: Reduce animaciones si el usuario lo prefiere */
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    transition: none;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    /* Ajuste de texto para dispositivos pequeños */
-  }
 }
 
 /* ****empieza pagina********* */
 .header {
   width: 100%;
   background-size: cover;
-  height: auto;
+  height: 36%;
+
   img {
     width: 100%;
-    object-fit: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
+    object-fit: cover;
+    /* Hace que la imagen cubra todo el espacio sin deformarse */
+  }
+
+  .article-header {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.397);
+    backdrop-filter: blur(12.5px);
+    top: 35px;
+    left: 22px;
+    padding: 7px;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    /* background: red; */
+  }
+}
+
+.main {
+  /* width: 100%; */
+  padding: 22px;
+}
+
+.article-main {
+  position: absolute;
+  background: var(--color-1);
+  width: calc(100% - 4.4rem); /* 100% menos los 22px de cada lado */
+  height: 140px;
+  top: 40%;
+  border-radius: 14px;
+
+  .article-section-tittle {
+    margin-top: 18.5px;
+    display: flex;
+    flex-direction: row;
+    font-family: "InterDisplay-SemiBold";
+    font-size: 14px;
+    gap: 4px;
+    /* background: green; */
+
+    /* margin-bottom: 6px; */
+    .h2-1 {
+      color: var(--color-2);
+    }
+
+    .h2-2 {
+      color: var(--color-3);
+    }
+  }
+
+  .img-txt {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+
+    img {
+      width: 11px;
+      height: 12px;
+      margin-right: 8px;
+    }
+
+    p {
+      font-family: "InterDisplay-Regular";
+      font-size: 12px;
+      color: var(--color-2);
+    }
+  }
+
+  .article-imgs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+
+    img:nth-child(2) {
+      margin-left: -14px;
+    }
+
+    img:nth-child(3) {
+      margin-left: -14px;
+    }
+
+    h3 {
+      margin-top: 6.5px;
+      margin-left: 8px;
+      font-family: "InterDisplay-Medium";
+      font-size: 12px;
+      color: var(--color-2);
+    }
   }
 }
