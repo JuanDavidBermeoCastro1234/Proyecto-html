@@ -1,5 +1,5 @@
 /* Configuración mínima mejorada */
-@import url(variables.css); /* Importa variables si las hay */
+@import url(variables_tickets.css); /* Importa variables si las hay */
 
 * {
   margin: 0;
