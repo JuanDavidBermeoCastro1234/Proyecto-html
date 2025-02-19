@@ -17,13 +17,13 @@
 
 @font-face {
     font-family: "InterDisplay-SemiBold";
-    src: url(../storage/font/InterDisplay-SemiBold.otf);
+    src: url(../storage/pag-home/font/InterDisplay-SemiBold.otf);
 }
 @font-face {
     font-family: "InterDisplay-Regular";
-    src: url(../storage/font/InterDisplay-Regular.otf);
+    src: url(../storage/pag-home/font/InterDisplay-Regular.otf);
 }
 @font-face {
     font-family: "Poppins-Regular";
-    src: url(../storage/font/Poppins-Regular.ttf);
+    src: url(../storage/pag-home/font/Poppins-Regular.ttf);
 }
