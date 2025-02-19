@@ -40,7 +40,7 @@
 .article-main {
   position: absolute;
   background: var(--color-1);
-  width: calc(100% - 4.4rem); /* 100% menos los 22px de cada lado */
+  width: calc(100% - 3rem); /* 100% menos los 22px de cada lado */
   height: 140px;
   top: 40%;
   border-radius: 14px;
