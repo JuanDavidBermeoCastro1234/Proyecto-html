@@ -1,0 +1,29 @@
+:root{
+
+    --color-1: #FFFFFF;
+    --color-2: #000000;
+    --color-3: #EC441E;
+    --color-4: #333333;
+    --color-5: #761CBC;
+    --color-6: #E4FFEA;
+    --color-7: #EDE9FF;
+    --color-8: #FFECEC;
+    --color-9: #FFF5D7;
+    --color-10: hsla(249, 32%, 22%, 0.3);
+    --color-11: hsla(249, 32%, 22%, 0.5);
+    --color-12: #d9d7e44f;
+
+}
+
+@font-face {
+    font-family: "InterDisplay-SemiBold";
+    src: url(../storage/font/InterDisplay-SemiBold.otf);
+}
+@font-face {
+    font-family: "InterDisplay-Regular";
+    src: url(../storage/font/InterDisplay-Regular.otf);
+}
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(../storage/font/Poppins-Regular.ttf);
+}

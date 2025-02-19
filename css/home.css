@@ -1,0 +1,368 @@
+/* Configuración mínima mejorada */
+@import url(variables.css); /* Importa variables si las hay */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Evita que padding y border aumenten el tamaño */
+  outline: px solid tomato; /* Depuración visual */
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+/****para usar rem basado en 10px*******/
+html {
+  font-size: 62.5%; /* Define que 1rem = 10px */
+}
+
+body {
+  min-height: 100dvh; /* Asegura que el body ocupe toda la pantalla */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Usa una fuente clara y legible */
+  /* padding: 39px 20.5px; */
+  line-height: 1.5; /* Espaciado cómodo entre líneas */
+}
+
+p {
+  text-wrap: pretty; /* Mejora la legibilidad de párrafos */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance; /* Ajusta los títulos para mejor distribución */
+}
+
+img, video, svg {
+  max-width: 100%; /* Hace que las imágenes sean responsivas */
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit; /* Hace que los formularios se vean uniformes */
+}
+
+/* Accesibilidad: Reduce animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition: none;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Ajuste de texto para dispositivos pequeños */
+  }
+}
+/*****empieza el css de la pagina******/
+body{
+  background-color: var(--color-12);
+}
+.header {
+  width: calc(100% - 4.4rem); /* 100% menos los 22px de cada lado */
+  /* height: auto; */
+  margin: 0 auto; 
+  margin-top: 4.3rem;/**se puede manejar con negativos para anular que por defecto ya trae arriba ya abajo*/
+
+}
+.header-section1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .img-header2{
+    width:34px;
+    height: 34px;
+  }
+  .img-header{
+    width:34px;
+    height: 34px;
+  }
+}
+.header-tile {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: calc(100% - 81px); /* Reducimos el ancho */
+  /* margin-right: 81px;    */
+  font-family:"InterDisplay-SemiBold" ;
+  font-size: 2rem;
+  .h1-1{
+    color: var(--color-2);
+  }
+  .h1-2{
+    color: var(--color-5);
+  }
+}
+.header-section2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: var(--color-1);
+  border-radius: 1rem;
+  margin-bottom: 1.6rem;
+  img{
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  input{
+    position: absolute;
+    width: 128px;
+    height: 17px;
+    box-sizing: border-box;
+    border: none;
+    left: 61px;
+    cursor: pointer;
+  }
+  input::placeholder {
+    color: var(--color-2);
+    font-family:  "InterDisplay-Regular";
+    font-size: 1.2rem;
+  }
+}
+.header-section-scrull {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  a{
+    padding: 0.65rem 1.45rem 0.65rem 1.45rem;
+    border-radius:0.8rem ;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:nth-child(1){
+    background-color: var(--color-7);
+  }
+  a:nth-child(2){
+    background-color: var(--color-9);
+  }
+  a:nth-child(3){
+    background-color: var(--color-8);
+  }
+  a:nth-child(4){
+    background-color: var(--color-6);
+  }
+} 
+/************/
+.main {
+  position: relative;
+  width: calc(100% - 4.4rem); /* 100% menos los 22px de cada lado */
+  /* height: auto; */
+  margin: 0 auto; 
+  margin-top: 4rem;
+  /* background:black; */
+}
+.section-main1 {
+  width: 100%;
+  /* background: red; */
+}
+.article-caption {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  h3{
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.4rem;
+    color: var(--color-2);
+  }
+  p{
+    font-family:  "InterDisplay-Regular";
+    color: var(--color-4);
+    font-size: 1.4rem;
+  }
+}
+
+/*********scrull main*********/
+.div-scrull-main{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin-top: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.article-content {
+  position: relative;
+  height: 186px;
+  flex-grow: 1; /* Asegura que el elemento se expanda para llenar el espacio */
+  flex-shrink: 0; /* Evita que el elemento se reduzca */
+}
+.section-content-figcaption{
+  /* background: green; */
+  position: absolute;
+  width: 332px;
+  height: 90px;
+  top: 8.8rem;
+  margin-left: 0.7rem;
+  display: flex;
+  z-index: 1;
+  background-color: rgba(96, 51, 116, 0.27);
+  backdrop-filter: blur(12.5px);
+  border-radius: 10px;
+}
+.section-article-content {
+  /* background: blue; */
+  width: 55.42%;
+  height: 57px;
+  margin-top: 16.5px;
+  margin-left: 13px;
+
+  h3{
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.2rem;
+    color: var(--color-1);
+    margin-bottom: 6px;
+    width: 100%;
+    height: 15px;
+    
+  }
+  figure{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 6px;
+
+    img{
+      width: 11px;
+      height: 12px;
+      display: block; /* Hace que la imagen sea un bloque */
+      margin-top: auto;
+      margin-bottom: auto; 
+    }
+    .figcaption1{
+      width: 163px;
+      height: 15px;
+      font-family:  "InterDisplay-Regular";
+      font-size: 12px;
+      color: var(--color-1);
+      margin-top: auto;
+      margin-bottom: auto; 
+    }
+    .figcaption2{
+      width: 109px;
+      height: 15px;
+      font-family:  "InterDisplay-Regular";
+      font-size: 12px;
+      color: var(--color-1);
+      margin-top: auto;
+      margin-bottom: auto; 
+    }
+  }
+}
+.section-article-infor {
+  /* background: violet; */
+  width:30.72%;
+  height: 3.5rem;
+  margin-left: 2rem;
+  margin-top: 2.75rem;
+  p{
+    width: 4.8rem;
+    height: 1.2rem;
+    font-family:  "InterDisplay-Regular";
+    font-size: 1rem;
+    color: var(--color-1);
+  }
+  h2{
+    width: 100%;
+    height: 1.9rem;
+    color: var(--color-1);
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.6rem;
+  }
+}
+
+/*************main bajo*********/
+.section-main-bajo {
+  margin-top: 4rem;
+  
+}
+.article-caption2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  h3{
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1.4rem;
+    color: var(--color-2);
+  }
+  p{
+    font-family:  "InterDisplay-Regular";
+    font-size: 1.2rem;
+    color: var(--color-4);
+    
+  }
+}
+/***************/
+.div-content-two-section{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1.6rem;
+  margin-bottom: 3.5rem;
+}
+.article-content-bajo {
+  width: 47.70%;
+  background-color: var(--color-1);
+  border-radius: 8px;
+  .img-principal{
+    width: 100%;
+    
+    margin-top:0.8rem ;
+  }
+  h3{
+    margin: 0;
+    font-family:"InterDisplay-SemiBold" ;
+    font-size: 1rem;
+    color: var(--color-2);
+    margin-bottom: 0.6rem;
+    margin-left: 0.8rem;
+  }
+  figure{
+    display: flex;
+    flex-direction: row;
+    width: 10.4rem;
+    height: 1.2rem;
+    margin-bottom: 0.6rem;
+    margin-left: 0.8rem;
+
+    img{
+      margin-right: 0.8rem;
+    }
+    figcaption{
+      font-family:  "InterDisplay-Regular";
+      font-size: 1rem;
+      color: var(--color-2);
+    }
+  }
+    .figure-3{
+      height: 1.6rem;
+      img{
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+      figcaption{
+        font-family: 1.2rem;
+      }
+    }
+}
+.article-content-bajo2 {
+  width: 47.70%;
+
+}
