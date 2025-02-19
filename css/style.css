@@ -6,16 +6,20 @@
   box-sizing: border-box;
 }
 
-/* ****empieza pagina********* */
+
+header{
+  padding-top: 22px;
+}
 .header {
   width: 100%;
   background-size: cover;
   height: 36%;
+  z-index: -1;
+  position: relative;
 
   img {
     width: 100%;
     object-fit: cover;
-    /* Hace que la imagen cubra todo el espacio sin deformarse */
   }
 
   .article-header {
@@ -28,7 +32,6 @@
     width: 34px;
     height: 34px;
     border-radius: 6px;
-    /* background: red; */
   }
 }
 
@@ -37,15 +40,17 @@
   padding: 22px;
 }
 
-.article-main {
+.article-main { 
   background: var(--color-1);
   height: 140px;
-  top: 40%;
-  border-radius: 14px;
-  background: red;
+  margin-top: -100px;
+  border-radius: 14px;  
+  background-color: var(--color-1);
+  z-index: 1;
+  padding-top: 18.5px;
+  padding-left: 20px;
 
   .article-section-tittle {
-    margin-top: 18.5px;
     display: flex;
     flex-direction: row;
     font-family: "InterDisplay-SemiBold";
